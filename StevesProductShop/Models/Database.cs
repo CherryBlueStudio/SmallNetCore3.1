@@ -47,6 +47,19 @@ namespace StevesProductShop.Models
             return products;
         }
 
+        public static Product GetProduct(string slug)
+        {
+            List<Product> products = Database.GetProducts();
 
+            foreach(Product p in products)
+            {
+                if (p.Slug == slug)
+                {
+                    return p;
+                }
+            }
+
+            return null;
+        }
     }
 }
