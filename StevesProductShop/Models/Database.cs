@@ -39,6 +39,13 @@ namespace StevesProductShop.Models
                 new Product
                 {
                     ProductID = 5,
+                    Name = "Product of the Month",
+                    Price = (decimal) 999.00
+                },
+
+                new Product
+                {
+                    ProductID = 6,
                     Name = "Shaving Cream Dispenser",
                     Price = (decimal) 19.00
                 }

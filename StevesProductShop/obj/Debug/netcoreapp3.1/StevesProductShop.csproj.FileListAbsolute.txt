@@ -31,3 +31,6 @@ C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\bin\Debug\netc
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\StevesProductShop.Views.pdb
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\StevesProductShop.genruntimeconfig.cache
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\StevesProductShop.csproj.CopyComplete
+C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\StevesProductShop.csprojAssemblyReference.cache
+C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\List.cshtml.g.cs
