@@ -34,3 +34,4 @@ C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netc
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\StevesProductShop.csprojAssemblyReference.cache
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
 C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\List.cshtml.g.cs
+C:\Users\steve\Documents\GitHub\SmallNetCore3.1\StevesProductShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
