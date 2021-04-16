@@ -1,2 +1,3 @@
 # SmallNetCore3.1
-A basic ASP.NET Core 3.1 MVC app
+
+Some small projects following an ASP.Net Core 3.1 MVC tutorial
