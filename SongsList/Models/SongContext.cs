@@ -18,13 +18,21 @@ namespace SongsList.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre { GenreId = "M", Name = "Metal" },
+                new Genre { GenreId = "R", Name = "Rap" },
+                new Genre { GenreId = "H", Name = "Hip Hop" },
+                new Genre { GenreId = "RC", Name = "Rock" }
+                );
+
             modelBuilder.Entity<Song>().HasData(
                 new Song
                 {
                     SongId = 1,
                     Name = "Master of Puppets",
                     Year = 1985,
-                    Rating = 5
+                    Rating = 5,
+                    GenreId = "M"
                 },
 
                 new Song
@@ -32,7 +40,8 @@ namespace SongsList.Models
                     SongId = 2,
                     Name = "Wonderwall",
                     Year = 1990,
-                    Rating = 3
+                    Rating = 3,
+                    GenreId = "RC"
                 },
 
                 new Song
@@ -40,7 +49,8 @@ namespace SongsList.Models
                     SongId = 3,
                     Name = "Lose Yourself",
                     Year = 2000,
-                    Rating = 2
+                    Rating = 2,
+                    GenreId = "R"
                 }
                 );
         }
