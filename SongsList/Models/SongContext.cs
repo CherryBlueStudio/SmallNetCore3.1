@@ -16,13 +16,16 @@ namespace SongsList.Models
 
         public DbSet<Song> Songs { get; set; }
 
+        public DbSet<Genre> Genres { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Genre>().HasData(
                 new Genre { GenreId = "M", Name = "Metal" },
                 new Genre { GenreId = "R", Name = "Rap" },
                 new Genre { GenreId = "H", Name = "Hip Hop" },
-                new Genre { GenreId = "RC", Name = "Rock" }
+                new Genre { GenreId = "RC", Name = "Rock" },
+                new Genre { GenreId = "P", Name = "Pop" }
                 );
 
             modelBuilder.Entity<Song>().HasData(
@@ -44,9 +47,18 @@ namespace SongsList.Models
                     GenreId = "RC"
                 },
 
+                 new Song
+                 {
+                     SongId = 3,
+                     Name = "Three",
+                     Year = 2010,
+                     Rating = 5,
+                     GenreId = "P"
+                 },
+
                 new Song
                 {
-                    SongId = 3,
+                    SongId = 4,
                     Name = "Lose Yourself",
                     Year = 2000,
                     Rating = 2,

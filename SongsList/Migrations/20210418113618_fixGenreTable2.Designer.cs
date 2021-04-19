@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SongsList.Models;
 
 namespace SongsList.Migrations
 {
     [DbContext(typeof(SongContext))]
-    partial class SongContextModelSnapshot : ModelSnapshot
+    [Migration("20210418113618_fixGenreTable2")]
+    partial class fixGenreTable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,11 +53,6 @@ namespace SongsList.Migrations
                         {
                             GenreId = "RC",
                             Name = "Rock"
-                        },
-                        new
-                        {
-                            GenreId = "P",
-                            Name = "Pop"
                         });
                 });
 
@@ -108,14 +105,6 @@ namespace SongsList.Migrations
                         new
                         {
                             SongId = 3,
-                            GenreId = "P",
-                            Name = "Three",
-                            Rating = 5,
-                            Year = 2010
-                        },
-                        new
-                        {
-                            SongId = 4,
                             GenreId = "R",
                             Name = "Lose Yourself",
                             Rating = 2,

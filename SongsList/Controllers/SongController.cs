@@ -9,17 +9,18 @@ namespace SongsList.Controllers
 {
     public class SongController : Controller
     {
-        private SongContext Context { get; set; }
+        private SongContext context { get; set; }
 
         public SongController(SongContext ctx)
         {
-            Context = ctx;
+            context = ctx;
         }
 
         [HttpGet]
         public IActionResult Add()
         {
             ViewBag.Action = "Add";
+            ViewBag.Genres = context.Genres.OrderBy(m => m.Name).ToList();
             return View("Edit", new Song());
         }
 
@@ -27,7 +28,8 @@ namespace SongsList.Controllers
         public IActionResult Edit(int id)
         {
             ViewBag.Action = "Edit";
-            var song = Context.Songs.Find(id);
+            ViewBag.Genres = context.Genres.OrderBy(m => m.Name).ToList();
+            var song = context.Songs.Find(id);
 
             return View(song);
         }
@@ -39,20 +41,21 @@ namespace SongsList.Controllers
             {
                 if (song.SongId == 0)
                 {
-                    Context.Songs.Add(song);
+                    context.Songs.Add(song);
                 }
                 else
                 {
-                    Context.Songs.Update(song);
+                    context.Songs.Update(song);
                 }
 
-                Context.SaveChanges();
+                context.SaveChanges();
 
                 return RedirectToAction("Index", "Home");
             }
             else
             {
                 ViewBag.Action = song.SongId == 0 ? "Add" : "Edit";
+                ViewBag.Genres = context.Genres.OrderBy(m => m.Name).ToList();
 
                 return View(song);
             }
@@ -61,7 +64,7 @@ namespace SongsList.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var song = Context.Songs.Find(id);
+            var song = context.Songs.Find(id);
 
             return View(song);
         }
@@ -69,8 +72,8 @@ namespace SongsList.Controllers
         [HttpPost]
         public IActionResult Delete(Song song)
         {
-            Context.Songs.Remove(song);
-            Context.SaveChanges();
+            context.Songs.Remove(song);
+            context.SaveChanges();
 
             return RedirectToAction("Index", "Home");
         }
